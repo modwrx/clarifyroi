@@ -50,11 +50,11 @@ if(wcCookie != null)
             .then(response => response.json())
             .then(data => {
             // Handle the API response data
-            console.log(data);
+            //console.log(data);
             })
             .catch(error => {
             // Handle any errors that occur during the API request
-            console.error(error);
+            //console.error(error);
         });
     }
 }
