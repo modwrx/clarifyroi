@@ -35,7 +35,7 @@ if(wcCookie != null)
             'currentUrl' : currentUrl
         };
 
-        createCookie('croi_user', wcCookie, .0005);
+        createCookie('croi_user', wcCookie, .5);
         console.log('roi doesnt exist or is not equal');
 
         const apiUrl = 'http://macam.modwrx.com/api/clarifyroi';
