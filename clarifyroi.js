@@ -38,7 +38,7 @@ if(wcCookie != null)
         createCookie('croi_user', wcCookie, .0005);
         console.log('roi doesnt exist or is not equal');
 
-        const apiUrl = 'http://192.168.1.30/api/clarifyroi';
+        const apiUrl = 'http://macam.modwrx.com/api/clarifyroi';
 
         fetch(apiUrl, {
             method: 'POST',
