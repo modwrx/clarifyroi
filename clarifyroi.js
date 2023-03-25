@@ -12,13 +12,15 @@ const queryString = window.location.search;
 
 const urlParams = new URLSearchParams(queryString);
 
+const currentUrl = window.location.href; 
 
 const source = urlParams.get('utm_source');
 const medium = urlParams.get('utm_medium');
 const campaign = urlParams.get('utm_campaign');
-const keyword = urlParams.get('utm_keyword');
+//const keyword = urlParams.get('utm_keyword');
+const keyword = extractKeywordFromUrl(currentUrl);
 
-const currentUrl = window.location.href;
+
 
 var CROICookie = readCookie("croi_user");
 var wcCookie = readCookie("wc_visitor");
@@ -35,7 +37,7 @@ if(wcCookie != null)
             'currentUrl' : currentUrl
         };
 
-        createCookie('croi_user', wcCookie, .5);
+        createCookie('croi_user', wcCookie, .0005);
         console.log('roi doesnt exist or is not equal');
 
         const apiUrl = 'https://macam.modwrx.com/api/clarifyroi';
@@ -59,6 +61,21 @@ if(wcCookie != null)
     }
 }
 
+function extractKeywordFromUrl(url) {
+  // Extract the query string from the URL
+  const queryString = url.split("?")[1];
+
+  // Extract the value of the "q" parameter from the query string
+  const regex = /q=([^&]+)/;
+  const match = queryString.match(regex);
+
+  // Return the keyword if found, otherwise null
+  if (match) {
+    return decodeURIComponent(match[1].replace(/\+/g, " "));
+  } else {
+    return null;
+  }
+}
 
 
 
