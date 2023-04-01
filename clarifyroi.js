@@ -1,3 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Landing Page</title>
+  <meta name="description" content="A brief description of my landing page.">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Landing Page</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>What We Offer</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor fringilla lacus, nec mollis velit euismod in. Proin vel ipsum dolor. Sed euismod id quam non dapibus. Aenean feugiat volutpat nibh, ut malesuada nulla euismod ut.</p>
+    <p>Phasellus eu rutrum mauris. Donec eget mauris et est maximus bibendum nec eget urna. Nulla facilisi. Nullam consectetur elementum nulla, at eleifend lorem ornare vel. Donec vestibulum sodales urna, ut facilisis mi bibendum quis.</p>
+    <a href="#" class="btn">Learn More</a>
+  </main>
+  <footer>
+    <p>&copy; 2023 My Landing Page. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+<!-- <script src="https://cdn.jsdelivr.net/gh/modwrx/clarifyroi@main/clarifyroi.js"></script> -->
+
+<script>
+
 function createCookie(name, value, days) {
   var expires = "";
   if (days) {
@@ -26,7 +61,7 @@ var CROICookie = readCookie("croi_user");
 var wcCookie = readCookie("wc_visitor");
 if(wcCookie != null)
 {
-    if(CROICookie === null || CROICookie != wcCookie) 
+    if(CROICookie === null || CROICookie != wcCookie || wcCookie != '105865-155764be-f535-662e-fe7f-86a214dcce45') 
     {
         const data = {
             'source' : source,
@@ -40,7 +75,7 @@ if(wcCookie != null)
         createCookie('croi_user', wcCookie, .5);
         console.log('roi doesnt exist or is not equal');
 
-        const apiUrl = 'https://macam.modwrx.com/api/clarifyroi';
+        const apiUrl = 'http://192.168.1.30/api/clarifyroi';
 
         fetch(apiUrl, {
             method: 'POST',
@@ -93,3 +128,6 @@ function readCookie(name) {
   }
   return null;
 }
+
+</script>
+
