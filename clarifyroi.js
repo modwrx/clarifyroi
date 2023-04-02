@@ -28,7 +28,7 @@ var CROICookie = readCookie("croi_user");
 var wcCookie = readCookie("wc_visitor");
 if(wcCookie != null)
 {
-    if(CROICookie === null || CROICookie != wcCookie || wcCookie != '105865-155764be-f535-662e-fe7f-86a214dcce45') 
+    if(CROICookie === null || CROICookie != wcCookie && wcCookie != '105865-155764be-f535-662e-fe7f-86a214dcce45') 
     {
         const data = {
             'source' : source,
