@@ -69,7 +69,7 @@ function extractKeywordFromUrl(url) {
 
   // Extract the value of the "q" parameter from the query string
   const regex = /q=([^&]+)/;
-  const match = queryString.match(regex);
+  var match = regex.exec(url);
 
   // Return the keyword if found, otherwise null
   if (match) {
