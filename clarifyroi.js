@@ -1,5 +1,3 @@
-<script>
-
 function createCookie(name, value, days) {
   var expires = "";
   if (days) {
@@ -96,5 +94,4 @@ function readCookie(name) {
   return null;
 }
 
-</script>
 
