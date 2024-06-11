@@ -40,7 +40,7 @@ if (wcCookie != null) {
     const vinMatch = document.body.innerHTML.match(/vin:\s*'([^']*)'/);
     const vin = vinMatch ? vinMatch[1] : null;
 
-    const stockNum = document.body.innerHTML.match(/vin:\s*'([^']*)'/);
+    const stockNum = document.body.innerHTML.match(/stock:\s*'([^']*)'/);
     const stock = stockNum ? stockNum[1] : null;
 
     const priceMatch = document.body.innerHTML.match(/price:\s*'([^']*)'/);
