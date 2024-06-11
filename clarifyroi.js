@@ -40,6 +40,9 @@ if (wcCookie != null) {
     const vinMatch = document.body.innerHTML.match(/vin:\s*'([^']*)'/);
     const vin = vinMatch ? vinMatch[1] : null;
 
+    const stockNum = document.body.innerHTML.match(/vin:\s*'([^']*)'/);
+    const stock = stockNum ? stockNum[1] : null;
+
     const priceMatch = document.body.innerHTML.match(/price:\s*'([^']*)'/);
     const price = priceMatch ? priceMatch[1] : null;
 
@@ -54,7 +57,8 @@ if (wcCookie != null) {
       year: year,
       make: make,
       model: model,
-      vin: vin
+      vin: vin,
+      stock: stock
     };
 
     createCookie("croi_user", wcCookie, 0.5);
